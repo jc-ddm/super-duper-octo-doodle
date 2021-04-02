@@ -18,6 +18,12 @@ using this ver ATM: ExifTool-12.22.dmg
 
 ## Step Notes
 
+ - 1 get files from SD to S3
+ - 2 get S3 to display on flicker?
+	- decide if we start with flicker or use picwiko sofware
+	- 
+
+## Notes for Steps process
 
 ### create preview jpg and store meta data to them
 
@@ -51,6 +57,12 @@ This is the base code taken from [here](https://ninedegreesbelow.com/photography
 I need to format it to rename with this format 
 processed/Month-Year/WeekDayYearTHourMinSec.ext
 `exiftool '-filename<CreateDate' -d ../processing/%m-%b-%Y/Week%UDay%dYear%YT-%s%%-c.%%le -r .`
+
+
+### Process to get from PC to Mac for Upload Process
+
+
+
 
 #### Mac timestamp info
 [timestamps for mac](https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/strftime.3.html) This is usefull info for adapting the stamp settings for the mac, this may need to be updated when this is ran on Linux or Windows.
