@@ -17,11 +17,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, BOB. WRITE A LINE OF CODE!
-
+      
+      - name: Slack Notification Bot Messages
+        uses: bryannice/gitactions-slack-notification@2.0.0
+        env:
+          SLACK_INCOMING_WEBHOOK: ${{ secrets.SLACK_INCOMING_WEBHOOK }}
+          SLACK_MESSAGE: 'We have just edited the Wiki for the Super DUPER Octo DOODLE repo you work on!'
+          SLACK_TITLE: 'SLACKING Bot Notification'
+          
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
